@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+<head>
+  <title>DataSci W207: Applied Machine Learning (Fall 2021)</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+
+
+<div class="container">
+  <div class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">W207</a>
+      </div>
+
+
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">About <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#description">Description</a></li>
+              <li><a href="#announcements">Announcements</a></li>
+              <li><a href="#logistics">Class Logistics</a></li>
+              <li><a href="#lecture">Live Session Plan</a></li>    
+              <li class="divider"></li>
+	      <li><a href="#grading">Grading</a></li>
+              <li class="divider"></li>    
+            </ul>
+		  
+          </li>
+          <li><a href="#project-submissions">Project Submission Guidelines</a></li>    
+	  <li><a href="https://learn.datascience.berkeley.edu/">ISVC</a></li>
+        </ul>
+	      
+      </div>
+    </div>
+  </div>
+
+	
+<div class="jumbotron">
+<h1>DataSci W207: </br>
+    Applied Machine Learning</h1>
+<h3> Session 3: Th, 4:00-5:30pm PT</h3>
+<h3> Session 99: Th, 6:30-8:00pm PT </h3>
+<h3> Office hours: Wed, 8:00-8:45am PT</h3>	
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">Description</div>
+  <div class="panel-body">
+    <a name="description"></a>
+	<p>The goal of this course is to provide a broad introduction to the key ideas in machine learning.
+	The emphasis will be on intuition and practical examples rather than theoretical results. Through a
+	variety of lecture examples and programming projects, you will learn how to apply powerful
+	machine-learning techniques to new problems, how to run evaluations and interpret results, and
+	how to think about scaling up from thousands of data points to billions.
+	  </p>
+	<p> This class meets for one 90 min class periods each week. 
+	It includes four guided programming projects and one more open-ended final project.
+	  </p>
+	<p> All materials in this course are posted on GitHub in the form of Jupyter notebooks.
+	  </p>
+	  
+  </div>
+</div>
+
+
+<div class="panel panel-default">
+  <div class="panel-heading">Announcements</div>
+  <div class="panel-body">
+    <a name="announcements"></a>
+    <ul>
+      <li> Please fill out this <a href="https://docs.google.com/forms/d/e/1FAIpQLSeJ0CPATHn3SzRAVCGFfy3S1-5EeDJwxEBa8D67egYMsdbnvA/viewform">PRE-COURSE survey</a> so I can get to know a bit more about you and your programming background. 	    
+      <li> We WILL NOT be using ISVC for communication. We will be using it only for assignment submissions.
+      </li>
+    </ul>
+
+  </div>
+</div>
+
+	
+<div class="panel panel-default">
+  <div class="panel-heading">Class Logistics</div>
+  <div class="panel-body">
+	  <a name="logistics"></a>
+	  <p> <b>Course Prerequisites</b>
+	  <ul>
+		<li><p>Core data science courses: research design, storing and retrieving data, exploring and analyzing data.</p></li>
+		<li><p>Undergraduate-level probability and statistics. Linear algebra is recommended.</li>
+	  </ul>
+	  </p>
+	
+	  <p> <b> Programming Prerequisites</b>
+	  <ul>
+		  <li><p>Python (v3). We will be primarly using <a href="https://numpy.org/">numpy</a> and <a href="https://scikit-learn.org/stable/">scikit-learn</a>.</p>
+		<li><p>Jupiter and JupiterLab notebooks. You can install them in your computer using <a href="https://pypi.org/project/pip/">pip</a> or <a href="https://www.anaconda.com/">Anaconda</a>. More information <a href="https://jupyter.org/install">here</a>.</p>	    
+	  	<li><p>Git(Hub), including clone/commmit/push from the command line. You can sign up for an account <a href="https://github.com/join">here.</a></p>
+	  </ul>	  
+	  <p> <b>OS</b>
+	  <ul>
+    		 <li><p> Mac/Windows/Linux are all acceptable to use.</p>  	    
+   		 </li>
+	  </ul>
+	  </p>
+	
+	  <p><b>Textbook</b>
+	  	<ul>
+		<li>Check readings posted on the iSchool Virtual Platform.</li>
+		</li>
+	  </ul>
+	  </p>
+
+	  <p><b>Assignments</b>
+	    <ul>
+		<li>The four guided programming projects are due on week 3 (Sept 12), week 5 (Sept 26), week 9 (Oct 24), week 12 (Nov 21).</li> 
+		<li> Code submmited via GitHub (see notes below).</li>   
+	    </ul>
+	  </p>
+
+	  <p><b>Final Project</b>
+	    <ul>
+		<li> You are allowed to work in teams. You will present your final project in class during the final session (Dec 9). The presentation time should not exeed 15-20 min.</li>
+		    <li> Code submmited via GitHub (see notes below).</li>
+	    </ul>
+	  </p>
+   </div>
+   </div>
+
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h2 class="panel-title">Live Session Plan</h2>
+  </div>
+  <div class="panel-body">
+    <a name="lecture"></a>
+    <p>
+    <hr /> 
+
+<table class="plan">
+  <tbody>
+    <tr>
+      <th>Week</th>
+      <th>Lecture</th>
+      <th>Lecture Materials</th>
+      <th><i>Deadlines (Sunday of the week, 11:59 pm PT)</th>
+    </tr>
+    <tr>
+      <td align="center" colspan="4" class="small-section-header">Supervised Learning</td>
+    </tr>
+	  
+    <tr>
+      <td>08/26
+      </td>
+      <td>Introduction
+      </td>
+	    
+      <td class="side-borders"> 
+      <a href="https://github.com/MIDS-W207/cilin-coursework/tree/master/live_sessions/week01">Week 1</a>
+      </td>   
+	    
+      <td> 
+      </td>   
+    </tr>
+
+    <tr>
+      <td>09/02
+      </td>
+      <td>Nearest neighbors
+      </td>
+
+      <td class="side-borders">
+       <a href="https://github.com/MIDS-W207/cilin-coursework/tree/master/live_sessions/week02">Week 2</a>
+      </td>
+
+      <td> 
+      </td> 	    
+    </tr>
+
+    <tr>
+      <td>09/09
+      </td>
+      <td>Naive Bayes
+      </td>
+
+	<td class="side-borders">
+	   <a href="https://github.com/MIDS-W207/cilin-coursework/tree/master/live_sessions/week03">Week 3</a>
+      </td>      
+      <td><a href="https://github.com/MIDS-W207/cilin-coursework/blob/master/projects/firstname_lastname_project1.ipynb">Project 1</a><br>
+      </td> 
+    </tr>
+
+    <tr>
+      <td>09/16
+      </td>
+      <td>Decission trees
+      </td>
+
+      <td class="side-borders">
+	  <a href="https://github.com/MIDS-W207/cilin-coursework/tree/master/live_sessions/week04">Week 4</a>
+      </td>
+
+      <td> 
+      </td>     
+    </tr>
+
+     <tr>
+      <td>09/23
+      </td>
+      <td>Cross-validation and Ensemble learning
+      </td>
+
+      <td class="side-borders">
+	  <a href="https://github.com/MIDS-W207/cilin-coursework/tree/master/live_sessions/week05">Week 5</a>
+      </td>      
+      <td><a href="https://github.com/MIDS-W207/cilin-coursework/blob/master/projects/firstname_lastname_project2.ipynb">Project 2</a><br>
+      </td> 
+    </tr>
+
+    <tr>
+      <td>09/30
+      </td>
+      <td>Regression analysis
+      </td>
+
+      <td class="side-borders">
+	   <a href="https://github.com/MIDS-W207/cilin-coursework/tree/master/live_sessions/week06">Week 6</a>
+      </td>
+	    
+       <td> Final project: group and dataset</a><br>
+      </td> 
+    </tr>
+
+   <tr>
+      <td>10/07
+      </td>
+      <td>Neural networks
+      </td>
+
+      <td class="side-borders">
+	    <a href="https://github.com/MIDS-W207/cilin-coursework/tree/master/live_sessions/week07">Week 7</a>
+      </td>  
+
+      <td> 
+      </td> 
+    </tr>
+
+   <tr>
+      <td>10/14
+      </td>
+      <td>Support vector machines
+      </td>
+
+      <td class="side-borders">
+	  <a href="https://github.com/MIDS-W207/cilin-coursework/tree/master/live_sessions/week08">Week 8</a>
+      </td> 
+
+      <td> 
+      </td> 
+    </tr>
+
+    <tr>
+      <td align="center" colspan="4" class="small-section-header">Unsupervised Learning</td>
+    </tr>
+
+    <tr>
+      <td>10/21
+      </td>
+      <td>Cluster analysis
+      </td>
+
+      <td class="side-borders">
+	   <a href="https://github.com/MIDS-W207/cilin-coursework/tree/master/live_sessions/week09">Week 9</a>
+      </td>      
+	    
+      <td>
+	     <a href="https://github.com/MIDS-W207/cilin-coursework/blob/master/projects/firstname_lastname_project3.ipynb">Project 3</a>
+      </td> 
+    </tr>
+
+   <tr>
+      <td>10/28
+      </td>
+      <td> Gaussian mixture models
+      </td>
+	   
+      <td class="side-borders">
+	   <a href="https://github.com/MIDS-W207/cilin-coursework/tree/master/live_sessions/week10">Week 10</a>
+      </td>      
+
+       <td>
+      </td> 
+    </tr>
+
+
+   <tr>
+      <td>11/04
+      </td>
+      <td>Dimensionality reduction
+      </td>
+ 
+      <td class="side-borders">
+	    <a href="https://github.com/MIDS-W207/cilin-coursework/tree/master/live_sessions/week11">Week 11</a>
+      </td>  
+
+      <td>   
+	    Final project: baseline presentation
+      </td> 
+	   
+    </tr>
+
+
+   <tr>
+      <td>11/11
+      </td>
+      <td>[Fall Break]
+      </td>
+ 
+      <td class="side-borders"> - 
+      </td>      
+
+      <td>
+      </td> 
+    </tr>
+
+    <tr>
+      <td align="center" colspan="4" class="small-section-header">Other Topics</td>
+    </tr>	  
+	
+   <tr>
+      <td>11/18
+      </td>
+      <td>Network analysis
+      </td>
+
+      <td class="side-borders">
+	    <a href="https://github.com/MIDS-W207/cilin-coursework/tree/master/live_sessions/week12">Week 12</a>
+      </td>      
+
+      <td>
+	      <a href="https://github.com/MIDS-W207/cilin-coursework/blob/master/projects/firstname_lastname_project4.ipynb">Project 4</a><br>
+      </td> 
+    </tr>
+
+
+
+    <tr>
+      <td>11/25
+      </td>
+      <td>[Thanksgiving Break]
+      </td>
+
+      <td class="side-borders"> -
+      </td>      
+
+      <td>
+      </td> 
+    </tr>
+
+
+
+    <tr>
+      <td>12/02
+      </td>
+      <td>Recommender systems
+      </td>
+
+      <td class="side-borders">
+	    <a href="https://github.com/MIDS-W207/cilin-coursework/tree/master/live_sessions/week13">Week 13</a>
+      </td>      
+
+      <td>
+      </td> 
+    </tr>
+
+ <tr>
+
+      <td>12/09
+      </td>
+      <td>Wrap-up
+      </td>
+
+      <td class="side-borders">
+	    Week 14
+      </td>      
+
+      <td>Final project: code and presentation</a><br>
+      </td> 
+    </tr>
+
+  </tbody>
+</table>
+</p>
+</div>
+</div> 
+
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h2 class="panel-title">Communication channel</h2>
+  </div>
+  <div class="panel-body">
+    <a name="lab"></a>
+    <p> We will use Slack to communicate throughout the semester. Questions/comments related to your projects (NO CODE) are strongly encouraged. 
+    <hr /> 
+
+<table class="plan">
+  <tbody>
+    <tr>
+      <th>Section</th>
+      <th>Slack channel</th>
+    </tr>
+
+    <tr>
+      <td align="center" colspan="2" class="small-section-header"></td>
+    </tr>
+
+    <tr>	  
+      <td>6
+      </td>
+      <td>
+	#datasci-207-2021-fall-section-99-3
+      </td>     
+    </tr>
+  </tbody>
+</table>
+</p>
+</div>
+</div> 
+
+
+<div class="panel panel-default">
+  <div class="panel-heading">Final Project</div>
+  <div class="panel-body">
+    <p> For the final project you will form a group (3-4 people are ideal; 2-5 people are allowed; no 1 person group allowed). 
+	    Grades will be calibrated by group size. 
+	    Your group can only include members from the section in which you are enrolled. </p>
+    <p> Do not just re-run an existing code repository; at the minimum, you must demonstrate the ability to 
+	    perform thoughtful data preprocessing and analysis (e.g., data cleaning, model training, hyperparameter selection, model evaluation).</p>
+    <p> The topic of your project is totally flexible (see also below some project ideas).</p>
+	  <p> <b>Deadlines to remember</b>: 
+	   <ul>
+	    <li> week 6: inform me [<a href="https://docs.google.com/spreadsheets/d/1WE8Fwp-V4S2RQIxz9w64LShvvf12O6_mpJDD0MqSF5w/edit?usp=sharing">here</a>]
+				       about your group and the dataset you plan to use. </li>
+	    <li> week 11: prepare a baseline presentation of your project. You will present in class (no more than 10 min). </li>
+	    <li> week 16: code submission and final presentation in class (no more than 15-20 min).</li>
+	</ul>
+	</p>	
+	<p> <b>A few project ideas</b>:
+	    <ul>
+	     <li><a href = "https://www.kaggle.com/c/house-prices-advanced-regression-techniques">Home price prediction</a></li>
+	     <li><a href= "https://www.kaggle.com/c/forest-cover-type-prediction">Forest cover type prediction</a></li>
+	     <li><a href = "https://www.kaggle.com/c/facial-keypoints-detection">Facial keypoints detection</a></li>
+	</ul>
+	</p>
+<p><b> Baseline presentation.</b> Your slides should include:
+	<ul>
+	    <li> Title, Authors </li>
+	    <li> What is the question you will be working on? Why is it interesting? </li>
+	    <li> What is the data you will be using? Include data source, size of dataset, main features to be used. Please also include summary statistics of your data. </li>
+	    <li> What prediction algorithms do you plan to use? Please describe them in detail.</li>
+	    <li> How will you evaluate your results? Please describe your chosen performance metrices and/or statistical tests in detail.</li>
+	</ul>
+        </p>
+
+<p> <b> Final presentation. </b> Your slides should include:
+	<ul>
+		<li>Title, Authors </li>
+		<li><b>(15%) Motivation:</b> Introduce your question and why the question is interesting. Explain what has been done before in this space.
+			Describe your overall plan to approach your question. Provide a summary of your results. </li>
+		<li><b>(15%) Data:</b> Describe in detail the data that you are using, 
+			including the source(s) of the data and relevant statistics. </li>
+		<li><b>(15%) Approach:</b> Describe in detail the model that you use 
+			in your approach. </li>
+		<li><b>(30%) Experiments:</b> Compare the performance of your chosen model with other baselines or models. </li>
+			Provide insight into the effect of different hyperperameter choices. Please include tables, figures, graphs to illustrate your experiments. </li>
+		<li><b>(10%) Conclusions:</b> Summarize the key results, what has been learned, and avenues for future work. </li>
+		<li><b>(15%) Code submission:</b> Provide link to your GitHub repo. The code should be well commented and organized.</li>
+		<li>Contributions: Specify the contributions of each author (e.g., data processing, algorithm implementation, slides etc).</li>
+	</ul>
+        </p>
+
+</div>
+</div>
+
+
+<div class="panel panel-default">
+  <div class="panel-heading">Project Submission Guidelines</div>
+  <div class="panel-body">
+    <a name="project-submissions"></a>	
+	<ul>
+		<li> Step 1: Create separate GitHub repos for Projects 1-4 and Final Project </li>
+		<li> Step 2: Submit your GitHub link, ipynb file(s), and slides [if Final Project] in ISVC </li>
+	</ul>
+</div>
+</div>
+
+
+<div class="panel panel-default">
+  <div class="panel-heading">Grading</div>
+  <div class="panel-body">
+    <a name="grading"></a>
+    <table class="table">      
+      <tr><td>Participation</td><td>5%</td>      
+      <tr><td>Programming projects</td><td>15% (x4)</td>
+      <tr><td>Final project</td><td>35%</td>
+      <p>Final grades will be determined by computing the weighted average of programming projects, 
+	      final group project, and participation.</p>
+	<p> Baseline grading range for this course is: A for 93 or above,
+	     A- for 90 or above, B+ for 87 or above, B for 83 or above, B- for 80 or above, C+ for 77 or above, C for 73 or above,
+	     C- for 70 and above, D+ for 67 and above, D for 63 and above, D- for 60 and above, and F for 59 and below.</p>
+  </table>    
+  </div>
+</div>
+
+
+
+<div class="panel panel-default">
+  <div class="panel-heading">Late Policy</div>
+  <div class="panel-body">
+  <a name="late-policy"></a>
+Late submissions will be accepted up to one week past the deadline with a 10% penalty, but you need to let me know if you will be submitting late.
+  </div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">Equity and Inclusion</div>
+  <div class="panel-body">
+  <a name="equity-and-inclusion"></a>
+<p> Integrating a diverse set of experiences is important for a more comprehensive understanding of machine learning. 
+I will make an effort to read papers and hear from a diverse group of practitioners, still, limits exist on this diversity in the field of machine learning. 
+I acknowledge that it is possible that there may be both overt and covert biases in the material due to the lens with which it was created. 
+I would like to nurture a learning environment that supports a diversity of thoughts, perspectives and experiences, and honors your identities 
+(including race, gender, class, sexuality, religion, ability, veteran status, etc.) in the spirit of the <a href="https://diversity.berkeley.edu/principles-community">UC Berkeley Principles of Community.</a>
+</p>
+
+<p>To help accomplish this, please contact me or submit anonymous feedback through I School channels if you have any suggestions to improve the quality of the course.
+If you have a name and/or set of pronouns that you prefer I use, please let me know. 
+If something was said in class (by anyone) or you experience anything that makes you feel uncomfortable, please talk to me about it. 
+If you feel like your performance in the class is being impacted by experiences outside of class, please don’t hesitate to come and talk with me. 
+I want to be a resource for you. Also, anonymous feedback is always an option, and may lead to me to make a general announcement to the class, if necessary, 
+to address your concerns. 
+</p> 
+	  
+<p>As a participant in teamwork and course discussions, you should also strive to honor the diversity of your classmates.
+</p> 
+
+<p>If you prefer to speak with someone outside of the course, MICS Academic Director Lisa Ho, I School Assistant Dean of Academic Programs Catherine Cronquist Browning,
+and the UC Berkeley Office for Graduate Diversity are excellent resources. Also see the following <a href="https://www.ischool.berkeley.edu/about/community">link.</a>
+</p>
+  </div>
+	
+	
+</div>
+</div>
+</div>
+</body>
+</html>
